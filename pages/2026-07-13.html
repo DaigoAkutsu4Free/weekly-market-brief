@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>週次マーケット情報ブリーフィング — Issue 02 (2026-07-13)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --bg: #1B1F27;
+    --bg-panel: #20242D;
+    --bg-panel-hover: #262B35;
+    --text: #EDEAE2;
+    --text-dim: #9AA0AC;
+    --text-faint: #5B616E;
+    --accent: #C98A3D;
+    --accent-dim: #8C6432;
+    --rule: #343A45;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', -apple-system, sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:40px 24px 96px;
+  }
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--text-dim);
+    text-decoration:none;
+    margin-bottom:28px;
+  }
+  .back-link:hover{ color:var(--accent); }
+
+  .masthead{
+    position:relative;
+    border-bottom:2px solid var(--rule);
+    padding-bottom:28px;
+    margin-bottom:40px;
+  }
+
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    color:var(--text-dim);
+    text-transform:uppercase;
+    margin-bottom:22px;
+  }
+
+  h1{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-size:clamp(32px, 5vw, 46px);
+    line-height:1.15;
+    margin:0 0 10px;
+    letter-spacing:-0.01em;
+  }
+
+  .subtitle{
+    font-size:15px;
+    color:var(--text-dim);
+    max-width:520px;
+  }
+
+  .stamp{
+    position:absolute;
+    top:-6px;
+    right:0;
+    border:1px solid var(--accent-dim);
+    color:var(--accent);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    padding:5px 10px;
+    transform:rotate(3deg);
+    opacity:0.85;
+  }
+
+  .index-rail{
+    display:flex;
+    gap:18px;
+    margin-bottom:44px;
+    flex-wrap:wrap;
+  }
+
+  .index-rail a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--text-dim);
+    text-decoration:none;
+    border-bottom:1px dotted var(--text-faint);
+    padding-bottom:2px;
+  }
+
+  .index-rail a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  .section{ margin-bottom:44px; scroll-margin-top:24px; }
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:18px;
+  }
+
+  .section-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--accent);
+    letter-spacing:0.1em;
+    border:1px solid var(--accent-dim);
+    padding:3px 8px;
+    white-space:nowrap;
+  }
+
+  .section-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:21px;
+    font-weight:600;
+    margin:0;
+  }
+
+  .item{
+    background:var(--bg-panel);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--accent-dim);
+    padding:18px 20px;
+    margin-bottom:12px;
+    transition:border-color .15s ease, background .15s ease;
+  }
+
+  .item:hover{ border-left-color:var(--accent); background:var(--bg-panel-hover); }
+
+  .item-title{ font-weight:600; font-size:15.5px; margin-bottom:6px; }
+  .item-body{ font-size:14px; color:var(--text-dim); margin-bottom:10px; }
+
+  .item-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--text-faint);
+  }
+
+  footer{
+    border-top:1px solid var(--rule);
+    margin-top:56px;
+    padding-top:20px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--text-faint);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  @media (max-width:560px){
+    .wrap{ padding:32px 18px 72px; }
+    .stamp{ position:static; display:inline-block; margin-bottom:16px; transform:none; }
+    .masthead-top{ flex-direction:column; gap:10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="../index.html">← 一覧に戻る</a>
+
+  <div class="masthead">
+    <div class="stamp">社内限定・サンプル</div>
+    <div class="masthead-top">
+      <span>ISSUE No.02</span>
+      <span>2026.07.07 – 2026.07.13</span>
+    </div>
+    <h1>週次マーケット情報ブリーフィング</h1>
+    <p class="subtitle">事業戦略チーム向け。市場動向・競合動向・技術トレンドを毎週まとめてお届けします。</p>
+  </div>
+
+  <nav class="index-rail">
+    <a href="#market">市場動向</a>
+    <a href="#competitor">競合動向</a>
+    <a href="#tech">技術トレンド</a>
+    <a href="#policy">規制・政策</a>
+  </nav>
+
+  <section class="section" id="market">
+    <div class="section-head">
+      <span class="section-tag">01</span>
+      <h2>市場動向</h2>
+    </div>
+    <div class="item">
+      <div class="item-title">サンプル項目:国内EV需要が第2四半期に鈍化</div>
+      <div class="item-body">ここに実際の情報源から要約したテキストが入ります。1項目あたり2〜3行を目安に。</div>
+      <div class="item-meta"><span>出典: サンプル</span><span>7月10日</span></div>
+    </div>
+    <div class="item">
+      <div class="item-title">サンプル項目:東南アジア市場の成長率予測が上方修正</div>
+      <div class="item-body">週次で差し替える想定のダミーテキストです。実データに置き換えてください。</div>
+      <div class="item-meta"><span>出典: サンプル</span><span>7月9日</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="competitor">
+    <div class="section-head">
+      <span class="section-tag">02</span>
+      <h2>競合動向</h2>
+    </div>
+    <div class="item">
+      <div class="item-title">サンプル項目:主要競合が新拠点を発表</div>
+      <div class="item-body">このセクションには競合他社の発表・提携・製品情報などを配置します。</div>
+      <div class="item-meta"><span>出典: サンプル</span><span>7月8日</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="tech">
+    <div class="section-head">
+      <span class="section-tag">03</span>
+      <h2>技術トレンド</h2>
+    </div>
+    <div class="item">
+      <div class="item-title">サンプル項目:次世代バッテリー技術の実用化見通し</div>
+      <div class="item-body">技術系のニュースや論文・特許動向などをここに要約します。</div>
+      <div class="item-meta"><span>出典: サンプル</span><span>7月7日</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="policy">
+    <div class="section-head">
+      <span class="section-tag">04</span>
+      <h2>規制・政策</h2>
+    </div>
+    <div class="item">
+      <div class="item-title">サンプル項目:排出規制の改定案が公表</div>
+      <div class="item-body">政策・規制動向で事業に影響しうるものをここにまとめます。</div>
+      <div class="item-meta"><span>出典: サンプル</span><span>7月6日</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>次号: 2026.07.20 更新予定</span>
+    <span>本ページはテンプレートのサンプルです</span>
+  </footer>
+
+</div>
+</body>
+</html>
