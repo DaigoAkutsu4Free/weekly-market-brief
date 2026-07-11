@@ -3,203 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>マーケット情報ブリーフィング — アーカイブ</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
-
-  :root{
-    --bg: #1B1F27;
-    --bg-panel: #20242D;
-    --bg-panel-hover: #262B35;
-    --text: #EDEAE2;
-    --text-dim: #9AA0AC;
-    --text-faint: #5B616E;
-    --accent: #C98A3D;
-    --accent-dim: #8C6432;
-    --rule: #343A45;
-  }
-
-  *{ box-sizing:border-box; }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter', -apple-system, sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  .wrap{
-    max-width:820px;
-    margin:0 auto;
-    padding:56px 24px 96px;
-  }
-
-  .masthead{
-    position:relative;
-    border-bottom:2px solid var(--rule);
-    padding-bottom:28px;
-    margin-bottom:40px;
-  }
-
-  .stamp{
-    position:absolute;
-    top:-6px;
-    right:0;
-    border:1px solid var(--accent-dim);
-    color:var(--accent);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.12em;
-    padding:5px 10px;
-    transform:rotate(3deg);
-    opacity:0.85;
-  }
-
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.08em;
-    color:var(--text-dim);
-    text-transform:uppercase;
-    margin-bottom:18px;
-  }
-
-  h1{
-    font-family:'Source Serif 4', serif;
-    font-weight:700;
-    font-size:clamp(30px, 5vw, 42px);
-    line-height:1.15;
-    margin:0 0 10px;
-    letter-spacing:-0.01em;
-  }
-
-  .subtitle{
-    font-size:15px;
-    color:var(--text-dim);
-    max-width:520px;
-  }
-
-  .list-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.1em;
-    color:var(--text-faint);
-    text-transform:uppercase;
-    padding:0 20px 10px;
-  }
-
-  .issue-list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .issue{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    background:var(--bg-panel);
-    border:1px solid var(--rule);
-    border-left:3px solid var(--accent-dim);
-    padding:16px 20px;
-    text-decoration:none;
-    color:inherit;
-    transition:border-color .15s ease, background .15s ease, transform .1s ease;
-  }
-
-  .issue:hover{
-    border-left-color:var(--accent);
-    background:var(--bg-panel-hover);
-    transform:translateX(2px);
-  }
-
-  .issue-no{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--accent);
-    width:56px;
-    flex-shrink:0;
-  }
-
-  .issue-main{ flex:1; min-width:0; }
-
-  .issue-title{
-    font-weight:600;
-    font-size:15.5px;
-    margin-bottom:4px;
-  }
-
-  .issue-range{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--text-dim);
-  }
-
-  .issue-arrow{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--text-faint);
-    font-size:16px;
-  }
-
-  footer{
-    border-top:1px solid var(--rule);
-    margin-top:48px;
-    padding-top:20px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--text-faint);
-  }
-
-  @media (max-width:560px){
-    .wrap{ padding:36px 18px 72px; }
-    .stamp{ position:static; display:inline-block; margin-bottom:16px; transform:none; }
-    .issue{ flex-wrap:wrap; }
-  }
-</style>
+<title>ROWLOG — 温室ロボティクス ウィークリー | HortiDaily発 施設園芸オートメーション キュレーション</title>
+<meta name="description" content="世界の施設園芸ニュースサイト HortiDaily.com が伝える収穫ロボット・受粉ロボット・AIビジョンなど、温室の自動化とロボット技術に関するニュースだけを毎週セレクトして紹介するキュレーションサイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
 
-  <div class="masthead">
-    <div class="stamp">社内限定・サンプル</div>
-    <div class="eyebrow">Strat &amp; Tech / マーケット情報</div>
-    <h1>週次マーケット情報ブリーフィング</h1>
-    <p class="subtitle">事業戦略チーム向けの週次まとめアーカイブです。各号のリンクから詳細ページに移動できます。</p>
-  </div>
-
-  <div class="list-head">
-    <span>号数</span>
-    <span>対象期間</span>
-  </div>
-
-  <div class="issue-list">
-    <a class="issue" href="pages/2026-07-13.html">
-      <span class="issue-no">No.02</span>
-      <span class="issue-main">
-        <div class="issue-title">サンプル:EV需要とバッテリー技術の週次動向</div>
-        <div class="issue-range">2026.07.07 – 2026.07.13</div>
-      </span>
-      <span class="issue-arrow">→</span>
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>ROWLOG<small>Greenhouse Robotics Weekly</small></span>
     </a>
-    <a class="issue" href="pages/2026-07-06.html">
-      <span class="issue-no">No.01</span>
-      <span class="issue-main">
-        <div class="issue-title">サンプル:創刊号(テンプレート初回サンプル)</div>
-        <div class="issue-range">2026.06.30 – 2026.07.06</div>
-      </span>
-      <span class="issue-arrow">→</span>
-    </a>
+    <nav class="nav-links">
+      <a href="#about"><span class="full">このサイトについて</span><span aria-hidden="true" class="mobile-only">概要</span></a>
+      <a href="#archive"><span class="full">週刊アーカイブ</span><span aria-hidden="true" class="mobile-only">記事</span></a>
+      <a class="src-badge" href="https://www.hortidaily.com/" target="_blank" rel="noopener">
+        <img src="https://www.hortidaily.com/dist/img/hd-com/logo.svg" alt="HortiDaily">
+        <span>original source</span>
+      </a>
+    </nav>
   </div>
+</header>
 
-  <footer>
-    新しい号は自動で上に追加されていきます / 本ページはテンプレートのサンプルです
-  </footer>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Greenhouse Automation Digest</span>
+    <h1>ROWLOG</h1>
+    <p class="h1-sub">施設園芸ロボティクス・ウィークリー</p>
+    <p class="lede">
+      収穫ロボット、受粉ロボット、AIビジョン、自動搬送——世界の施設園芸専門ニュースサイト
+      <strong>HortiDaily.com</strong> が日々伝える膨大なニュースの中から、温室における
+      「自動化・ロボット技術」に関する記事だけを毎週セレクトし、要約とともに紹介しています。
+    </p>
+    <div class="hero-meta">
+      <a class="source-pill" href="https://www.hortidaily.com/" target="_blank" rel="noopener">
+        <img src="https://www.hortidaily.com/dist/img/hd-com/logo.svg" alt="HortiDaily.com logo">
+        <span>
+          <span class="l1">Powered by news from</span>
+          <span class="l2">HortiDaily.com</span>
+        </span>
+      </a>
+      <span class="cadence-pill">更新頻度 <b>毎週</b> ・ 掲載記事はすべて原文へリンク</span>
+    </div>
+  </div>
+</section>
 
-</div>
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>このサイトについて</h2>
+    <p class="section-intro">
+      ROWLOGは、施設園芸(グリーンハウス)における自動化・ロボット技術の動向を追いたい生産者・研究者・
+      業界関係者向けに、HortiDaily.comの記事を独自の視点で選定・要約する非公式キュレーションサイトです。
+    </p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="tag">Source / 情報源</span>
+        <h3>HortiDaily.com</h3>
+        <p>オランダ発、世界の施設園芸業界をカバーする代表的なニュースメディア。本サイトは同サイトの公開記事を要約・引用し、原文へのリンクを付して紹介しています。</p>
+      </div>
+      <div class="feature-card">
+        <span class="tag">Cadence / 更新</span>
+        <h3>週次アップデート</h3>
+        <p>月曜〜日曜の1週間に公開された記事の中から自動化・ロボティクス関連のトピックを選び、週替わりのページとして公開します。</p>
+      </div>
+      <div class="feature-card">
+        <span class="tag">Focus / 対象領域</span>
+        <h3>収穫・受粉・搬送・AIビジョン</h3>
+        <p>収穫ロボット、受粉ロボット、自律搬送台車、選果・グレーディングAI、温室内ナビゲーションなど、ハードウェア寄りの自動化トピックに焦点を当てています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="archive" id="archive">
+  <div class="wrap">
+    <h2>週刊アーカイブ</h2>
+    <p class="section-intro">直近4週間分のサンプルページです。カードをクリックすると、その週にセレクトした記事一覧に移動します。</p>
+
+    <div class="week-grid">
+
+      <a class="week-card is-latest" href="pages/2026-06-30.html">
+        <div class="thumbstrip">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/GN_nl/2026/07/03/HumanoidRobotHarvestHousemetJohn.jpeg?preset=ContentCustom" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/06/26/BL1.jpg?preset=ContentFullSmall" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/06/12/WVU.jpg?preset=ContentFullSmall" alt="" loading="lazy">
+        </div>
+        <div class="wc-body">
+          <span class="wc-label"><span class="dot"></span>2026.06.30 – 07.06 ・ 最新号</span>
+          <h3>ヒューマノイド収穫ロボット、AI×ロボティクス研究拠点への大型投資 ほか</h3>
+          <p>パプリカ収穫に挑むヒューマノイドロボットの実証や、大学発の自動化研究拠点拡張など3記事を掲載。</p>
+          <span class="wc-cta">この週を見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="week-card" href="pages/2026-06-08.html">
+        <div class="thumbstrip">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/StockPhotos/Greenhouses/GreenHouse_FP_img_0075.jpg?preset=OgImage" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/06/04/robot2.jpg?preset=ContentFullSmall" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/06/01/tokuiten-harvest-robot-greenhouse.jpg?preset=ContentFullSmall" alt="" loading="lazy">
+        </div>
+        <div class="wc-body">
+          <span class="wc-label"><span class="dot"></span>2026.06.08 – 06.14</span>
+          <h3>四足歩行ロボット、LED温室での受粉ロボット実証、ミニトマト収穫ロボット定常稼働</h3>
+          <p>スペインの新研究拠点、スウェーデンの受粉ロボット実証、日本発の収穫ロボット本稼働など3記事。</p>
+          <span class="wc-cta">この週を見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="week-card" href="pages/2026-05-11.html">
+        <div class="thumbstrip">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/05/12/harvester.jpg?preset=ContentFullSmall" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/04/01/BL.jpg?preset=SidebarArticleSmall" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/04/07/wur.jpg?preset=SidebarArticleSmall" alt="" loading="lazy">
+        </div>
+        <div class="wc-body">
+          <span class="wc-label"><span class="dot"></span>2026.05.11 – 05.17</span>
+          <h3>「シミュレーション・ファースト」開発の収穫ロボット、新設ロボティクス・ラボ ほか</h3>
+          <p>独eternal.agの仮想環境開発手法や、大学発の温室ロボット研究拠点の話題を3記事セレクト。</p>
+          <span class="wc-cta">この週を見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="week-card" href="pages/2026-03-16.html">
+        <div class="thumbstrip">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2026/03/20/K.png?preset=SidebarArticleSmall" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/HD_com/2023/04/19/four.jpg?preset=ContentCustom" alt="" loading="lazy">
+          <img src="https://www.hortidaily.com/remote/https/agfstorage.blob.core.windows.net/misc/FP_com/2025/06/13/131-8.jpg?preset=ContentFullSmall" alt="" loading="lazy">
+        </div>
+        <div class="wc-body">
+          <span class="wc-label"><span class="dot"></span>2026.03.16 – 03.22</span>
+          <h3>自律型気候制御、トマト収穫ロボット群の本格稼働、AI選果ロボット ほか</h3>
+          <p>メキシコの自律気候制御、オランダの収穫ロボット群、AI選果システムなど3記事を振り返り掲載。</p>
+          <span class="wc-cta">この週を見る <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap-outer">
+  <div class="wrap">
+    <p class="footer-note">
+      <strong>出典について:</strong> 本サイトに掲載する記事タイトル・要約・画像は、すべて
+      <a href="https://www.hortidaily.com/" target="_blank" rel="noopener" style="color:var(--green-deep);">HortiDaily.com</a>
+      の公開記事に基づいています。要約は独自にまとめたものであり、詳細および正式な記述は各記事のリンク先の原文をご参照ください。
+      画像の著作権は各記事に記載のクレジット元に帰属します。本サイトは HortiDaily.com とは無関係の非公式キュレーションです。
+    </p>
+    <div class="footer-links">
+      <a href="#about">このサイトについて</a>
+      <a href="#archive">週刊アーカイブ</a>
+      <a href="https://www.hortidaily.com/" target="_blank" rel="noopener">HortiDaily.com ↗</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="copyright">ROWLOG — an unofficial weekly curation of greenhouse automation &amp; robotics news from HortiDaily.com</p>
+  </div>
+  </div>
+</footer>
+
 </body>
 </html>
